@@ -1,10 +1,17 @@
 import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
+import Hero from "../components/Hero";
 
 export default function Home({ posts }) {
   console.log(posts);
-  return <div className="min-h-screen bg-blue-500">hi there</div>;
+  return (
+    <>
+      <Hero />
+
+      {/* show sample apps in a grid */}
+    </>
+  );
 }
 
 export function getStaticProps() {
