@@ -30,11 +30,11 @@ export default function Home({ apps }) {
 
 export function getStaticProps() {
   const appsPath = path.join(process.cwd(), "apps");
-  const postFilePaths = fs
+  const appFilePaths = fs
     .readdirSync(appsPath)
     .filter((path) => /\.mdx?$/.test(path));
 
-  const apps = postFilePaths.map((filePath) => {
+  const apps = appFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(appsPath, filePath));
     const { content, data } = matter(source);
 
