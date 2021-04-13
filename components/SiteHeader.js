@@ -17,9 +17,9 @@ export default function SiteHeader() {
 function Logo() {
   return (
     <Link href="/">
-      <a className="inline-block relative py-2 px-4">
+      <a className="group inline-block relative py-2 px-4 transform hover:translate-x-3 transition ease-in-out duration-200">
         {/* background shadow with absolutely positioned item */}
-        <span className="block absolute inset-0 bg-blue-600 shadow-lg rounded transform -skew-x-12"></span>
+        <span className="block absolute inset-0 bg-blue-600 group-hover:bg-blue-700 transition shadow-lg rounded transform -skew-x-12"></span>
 
         {/* content */}
         <span className="block relative italic font-medium text-white">
@@ -33,10 +33,16 @@ function Logo() {
 function SiteNav() {
   return (
     <div className="hidden md:flex items-center">
-      <a href="#" className="font-semibold py-2 px-3 hover:text-white">
+      <a
+        href="https://docs.digitalocean.com/"
+        className="font-semibold py-2 px-3 hover:text-white"
+      >
         Docs
       </a>
-      <a href="#" className="font-semibold py-2 px-3 hover:text-white">
+      <a
+        href="https://cloud.digitalocean.com/apps"
+        className="font-semibold py-2 px-3 hover:text-white"
+      >
         Apps Dashboard
       </a>
     </div>
