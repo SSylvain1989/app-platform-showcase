@@ -1,11 +1,8 @@
-import matter from "gray-matter";
-import fs from "fs";
-import path from "path";
 import Hero from "../components/Hero";
 import AppPreview from "../components/AppPreview";
+import { getApps } from "../lib/api";
 
 export default function Home({ apps }) {
-  console.log(apps);
   return (
     <div>
       <div className="max-w-7xl mx-auto px-8 py-20">
@@ -29,21 +26,6 @@ export default function Home({ apps }) {
 }
 
 export function getStaticProps() {
-  const appsPath = path.join(process.cwd(), "apps");
-  const appFilePaths = fs
-    .readdirSync(appsPath)
-    .filter((path) => /\.mdx?$/.test(path));
-
-  const apps = appFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(appsPath, filePath));
-    const { content, data } = matter(source);
-
-    return {
-      content,
-      data,
-      filePath,
-    };
-  });
-
+  const apps = getApps();
   return { props: { apps } };
 }
