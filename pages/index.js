@@ -5,8 +5,13 @@ import { getApps } from "../lib/api";
 export default function Home({ apps }) {
   return (
     <div>
-      <div className="max-w-7xl mx-auto px-8 py-20">
-        <Hero />
+      <div className="bg-blue-500 text-blue-50">
+      <div className="max-w-7xl mx-auto px-8 py-20 text-center">
+        <Hero subtitle="Welcome" title="Let's build with App Platform!">
+          Sample applications and sample data to get you started building App
+          Platform apps.
+        </Hero>
+      </div>
       </div>
 
       {/* show sample apps in a grid */}

@@ -19,10 +19,10 @@ function Logo() {
     <Link href="/">
       <a className="inline-block relative py-2 px-4">
         {/* background shadow with absolutely positioned item */}
-        <span className="block absolute inset-0 bg-white rounded transform -skew-x-12"></span>
+        <span className="block absolute inset-0 bg-blue-600 shadow-lg rounded transform -skew-x-12"></span>
 
         {/* content */}
-        <span className="block relative font-semibold text-blue-800">
+        <span className="block relative italic font-medium text-white">
           DigitalOcean App Platform Resources
         </span>
       </a>

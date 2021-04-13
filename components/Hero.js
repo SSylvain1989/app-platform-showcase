@@ -1,15 +1,14 @@
-export default function Hero() {
+export default function Hero({ subtitle, title, children }) {
   return (
     <div>
       {/* title */}
       <h1 className="mb-6 text-5xl font-extrabold">
-        <span className="block text-xl mb-3 opacity-70">Welcome!</span>
-        <span>Let's Build with App Platform</span>
+        {subtitle && (
+          <span className="block text-xl mb-3 opacity-70">{subtitle}</span>
+        )}
+        {title && <span>{title}</span>}
       </h1>
-      <p className="text-lg text-gray-700">
-        Sample applications and sample data to get you started building App
-        Platform apps.
-      </p>
+      <p className="text-lg opacity-50">{children}</p>
 
       {/*  */}
     </div>

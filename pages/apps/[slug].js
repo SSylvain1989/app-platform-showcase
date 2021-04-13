@@ -1,9 +1,17 @@
 import { join, replace } from "path";
 import fs from "fs";
 import { getApp } from "../../lib/api";
+import Hero from "../../components/Hero";
 
 export default function App({ app }) {
-  return <div>app page goes here</div>;
+  return (
+    <div>
+      <Hero subtitle="Welcome" title="Let's build with App Platform!">
+        Sample applications and sample data to get you started building App
+        Platform apps.
+      </Hero>
+    </div>
+  );
 }
 
 // STEP 1. i have this many pages i want you to generate
