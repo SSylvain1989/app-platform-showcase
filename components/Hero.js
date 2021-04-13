@@ -1,6 +1,6 @@
-export default function Hero({ subtitle, title, children }) {
+export default function Hero({ subtitle, title, className, children }) {
   return (
-    <div>
+    <div className={className}>
       {/* title */}
       <h1 className="mb-6 text-5xl font-extrabold">
         {subtitle && (
@@ -9,8 +9,6 @@ export default function Hero({ subtitle, title, children }) {
         {title && <span>{title}</span>}
       </h1>
       <p className="text-lg opacity-50">{children}</p>
-
-      {/*  */}
     </div>
   );
 }
